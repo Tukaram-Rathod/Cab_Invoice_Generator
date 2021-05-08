@@ -1,9 +1,15 @@
 package cabInvoice;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class InvoiceServiceTest {
+    InvoiceGenerator invoiceGenerator = null;
+    @Before
+    public void setUp() throws Exception {
+        invoiceGenerator = new InvoiceGenerator();
+    }
     // testing for total fare
     @Test
     public void givenDistanceAndTime_ShouldReturnTotalFare(){
